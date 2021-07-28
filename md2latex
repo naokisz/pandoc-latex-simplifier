@@ -15,4 +15,4 @@ pandoc --wrap=preserve -f markdown $1 -t latex \
 	| sed -e "s/\\\)/\$/g" \
 	| sed -e '/\\def/d' \
 	| unexpand -t 2 \
-	| latexindent -
+	| latexindent -logfile=/tmp/indent.log -
